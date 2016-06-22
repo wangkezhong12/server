@@ -1,0 +1,29 @@
+# depslib dependency file v1.0
+1466580543 source:/home/kezon-wong/CodeStation/codeblocks/server/main.cpp
+	<iostream>
+	"tcp_server.h"
+	"mysql_act.h"
+	<string>
+
+1466580520 source:/home/kezon-wong/CodeStation/codeblocks/server/src/tcp_server.cpp
+	"tcp_server.h"
+
+1466580487 /home/kezon-wong/CodeStation/codeblocks/server/include/tcp_server.h
+	<iostream>
+	<stdlib.h>
+	<netinet/in.h>
+	<unistd.h>
+	<sys/socket.h>
+	<arpa/inet.h>
+	<string.h>
+	"mysql_act.h"
+
+1466580560 source:/home/kezon-wong/CodeStation/codeblocks/server/src/mysql_act.cpp
+	"mysql_act.h"
+
+1466580422 /home/kezon-wong/CodeStation/codeblocks/server/include/mysql_act.h
+	<string>
+	<iostream>
+	<mysql/mysql.h>
+	<vector>
+
