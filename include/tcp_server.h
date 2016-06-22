@@ -20,6 +20,6 @@ private:
 public:
         tcp_server(int listen_port);
         int recv_msg();
-        int recv_msg(mysql_act ma,int colnum);
+        int recv_msg(mysql_act ma);
         int send_buff(int socketi,char* buffer,int sendlen);
 };

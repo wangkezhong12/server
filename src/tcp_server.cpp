@@ -63,7 +63,7 @@ int tcp_server::recv_msg() {
 
 
 
-int tcp_server::recv_msg(mysql_act ma,int colnum)
+int tcp_server::recv_msg(mysql_act ma)
 {
     cout<<"listening...... "<<endl;
     while(1) {
@@ -95,8 +95,8 @@ int tcp_server::recv_msg(mysql_act ma,int colnum)
             n = recv(accept_fd,buffer,MAXSIZE,0);
             buffer[n] = '\0';
             cout<<*buffer<<endl;
-            ma.mysql_search(buffer,colnum);
-            string mares = ma.res_str;
+
+            string mares = ma.mysql_search(buffer);
             cout<<"mares:"<<mares<<endl;
            // const char* pstr = mares.c_str();
             char* sl= new char[mares.size()];
@@ -104,8 +104,7 @@ int tcp_server::recv_msg(mysql_act ma,int colnum)
             {
                 sl[k]=mares.at(k);
             }
-            //cout<<"pstr:"<<sl<<endl;
-            send_buff(accept_fd,sl,ma.res_str.length());
+            send_buff(accept_fd,sl,mares.length());
             close(accept_fd);
         }
     return 0;
