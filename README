@@ -1,3 +1,9 @@
+### ABSTRACT
+
+this is a C++ socket server.  
+
+### COMPILE
+
  g++ -Wall -fexceptions -g -Iinclude -c /home/kezon-wong/CodeStation/codeblocks/server/src/tcp_server.cpp -o obj/Debug/src/tcp_server.o -lmysqlclient -I/usr/include/mysql/ -L/usr/lib/mysql
 
 
