@@ -3,10 +3,11 @@
 this is a C++ socket server.  
 
 ### COMPILE
-
+1.
  g++ -Wall -fexceptions -g -Iinclude -c /home/kezon-wong/CodeStation/codeblocks/server/src/tcp_server.cpp -o obj/Debug/src/tcp_server.o -lmysqlclient -I/usr/include/mysql/ -L/usr/lib/mysql
 
 
  g++  -o bin/Debug/server obj/Debug/main.o obj/Debug/src/mysql_act.o obj/Debug/src/tcp_server.o  -lmysqlclient -I/usr/include/mysql/ -L/usr/lib/mysql
 
 xterm -T server -e /usr/bin/cb_console_runner LD_LIBRARY_PATH=$LD_LIBRARY_PATH:. /home/kezon-wong/CodeStation/codeblocks/server/bin/Debug/server
+2. import the project to codeblocks and build, compile
